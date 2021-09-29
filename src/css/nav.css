@@ -1,0 +1,101 @@
+/* 
+    white-ish color: #e6e6e6
+
+*/
+
+
+.sm-wrapper {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #26272b;
+    -webkit-box-shadow: 10px 10px 26px -3px rgba(0,0,0,0.34);
+    -moz-box-shadow: 10px 10px 26px -3px rgba(0,0,0,0.34);
+    box-shadow: 10px 10px 26px -3px rgba(0,0,0,0.34);
+}
+
+.main-content-container {
+    height: 1000px;
+    width: 100%;
+    /* margin-left: 250px; */
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #26272b;
+    overflow: hidden;
+}
+
+.main-content-wrapper {
+    margin-left: 250px;
+}
+
+/* Home & Data Icon */
+.nav-link img {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    
+}
+
+.active {
+    filter: brightness(1) invert(1);
+    background-color: #1c1b21;
+    border-radius: 50%;
+    /* position: relative; */
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    -webkit-box-shadow: -1px 0px 93px -15px rgba(0,0,0,1);
+    -moz-box-shadow: -1px 0px 93px -15px rgba(0,0,0,1);
+    box-shadow: -1px 0px 93px -15px rgba(0,0,0,1);
+}
+
+
+.sm-wrapper .nav-link {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    margin-top: 70px;
+    margin-left: 20%;
+    transition: .8s;
+}
+
+.sm-wrapper .nav-link:hover {
+    background-color: #1c1b21;
+    border-radius: 50%;
+    /* position: relative; */
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    -webkit-box-shadow: -1px 0px 66px -15px rgba(0,0,0,0.79);
+    -moz-box-shadow: -1px 0px 66px -15px rgba(0,0,0,0.79);
+    box-shadow: -1px 0px 66px -15px rgba(0,0,0,0.79);
+    
+}
+
+
+/* logout Icon */
+
+.sm-wrapper .nav-link-logout img {
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    margin-top: 500px;
+    margin-left: 40%;
+    position: absolute;
+}
+
+.sm-wrapper .nav-link-logout img:hover {
+    filter: brightness(0) invert(1);
+    border-radius: 50%;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+} 
+
+
+/* Animations */
+

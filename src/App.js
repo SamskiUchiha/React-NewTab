@@ -1,26 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, NavLink, Link } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import "./css/nav.css";
+
+import firebase from 'firebase/app';
+import 'firebase/database'; 
+import 'firebase/storage'; 
+
+import BookmarkPage from './pages/BookmarkPage.js';
+import DataPage from './pages/DataPage.js';
+
+import HomeIcon from './images/home-icon.svg';
+import DataIcon from './images/data-icon.svg';
+import LogoutIcon from './images/logout-icon.svg';
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      speed: 16,
+    };
+  }
+
+  render() {
+    return (
+      <>
+        <Router>
+          <div className="sidebar">
+              <div className="sm-wrapper">
+                  <NavLink activeClassName={"active"} className="nav-link" exact={true} to="/">
+                    <img src={HomeIcon} alt="Home icon"/>
+                  </NavLink>
+
+                  <NavLink activeClassName={"active"} className="nav-link" to="/data">
+                    <img src={DataIcon} alt="Data icon"/>
+                  </NavLink>
+
+                  <NavLink className="nav-link-logout" to="/data1">
+                    <img src={LogoutIcon} alt="Logout icon"/>
+                  </NavLink>
+              </div>
+
+              <div className="main-content-container">
+                <div className="main-content-wrapper">
+                  <Route path="/" exact render={() => <BookmarkPage/>}/>
+                  <Route path="/data" exact render={() => <DataPage/>}/>
+                </div>
+                  
+              </div>
+          </div>
+
+        </Router>
+    </>
+    );
+  }
+
+
 }
 
 export default App;
